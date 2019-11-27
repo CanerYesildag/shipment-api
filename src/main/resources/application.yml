@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: shipment-api
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1/shipment
+    username: root
+    password:
+  jpa:
+    hibernate.ddl-auto: validate
+    generate-ddl: true
+    show-sql: true
+  main:
+   allow-bean-definition-overriding: true
+
+server:
+  port: 8081
+
+#  feign:
+#   client:
+#    config:
+#      default:
+#        connectTimeout: 5000
+#        readTimeout: 5000
+#        loggerLevel: basic
