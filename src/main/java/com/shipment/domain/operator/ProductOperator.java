@@ -9,12 +9,16 @@ import com.shipment.persistence.entitiy.Product;
 import com.shipment.persistence.service.AdvertisementApiCallerService;
 import com.shipment.persistence.service.ProductService;
 import com.shipment.persistence.vo.ProductVo;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 import java.util.Optional;
 
 @Component
 public class ProductOperator {
+
+    private final Logger logger = LoggerFactory.getLogger(ProductOperator.class);
 
     private final ProductRequestToVoConverter productRequestToVoConverter;
     private final ProductService productService;
@@ -35,6 +39,7 @@ public class ProductOperator {
         Optional<Product> productOpt = productService.retrieveProduct(id);
          productOpt.ifPresent(product -> {
             String advertisement = advertisementApiCallerService.giveAdvertisement();
+            logger.info("AdvertisementCallerService called advertisement: {}", advertisement);
             product.setName( advertisement + product.getName());
         });
          return productOpt;
