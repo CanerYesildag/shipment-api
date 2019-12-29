@@ -1,21 +1,21 @@
-spring:
-  application:
-    name: shipment-api
-  datasource:
-    driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1/shipment
-    username: root
-    password:
-  jpa:
-    hibernate.ddl-auto: validate
-    generate-ddl: true
-    show-sql: true
-  main:
-   allow-bean-definition-overriding: true
-server:
-  port: 8081
-logging:
-  level:
-    org.springframework.web : info
-    org.hibernate: info
-    file : shipment.log
+#spring:
+#  application:
+#    name: shipment-api
+#  datasource:
+##    driverClassName: com.mysql.jdbc.Driver
+#    url: jdbc:mysql://127.0.0.1/shipment
+#    username: root
+#    password:
+#  jpa:
+#    hibernate.ddl-auto: validate
+#    generate-ddl: true
+#    show-sql: true
+#  main:
+#   allow-bean-definition-overriding: true
+#server:
+#  port: 8081
+#logging:
+#  level:
+#    org.springframework.web : info
+#    org.hibernate: info
+#    file : shipment.log

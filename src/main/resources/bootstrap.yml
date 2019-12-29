@@ -1,15 +1,12 @@
-#spring:
-#  application:
-#    name: shipment-api
-#  cloud:
-#    config:
-#      uri: http://localhost:8888
-#      failFast: true
-#---
-#spring:
-#  profiles: local
-#  cloud:
-#    config:
-#      uri: http://localhost:8888
-#      failFast: true
-#---
+spring:
+  application:
+    name: shipment-api
+  cloud:
+    config:
+      uri: http://localhost:8888
+      failFast: true
+---
+spring:
+  profiles: local
+
+---

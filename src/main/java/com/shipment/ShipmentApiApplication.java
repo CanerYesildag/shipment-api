@@ -7,7 +7,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @SpringBootApplication
 @EnableFeignClients
-@EnableSwagger2
+@EnableSwagger2 // Bunu oluştururken http://localhost:8081/swagger-ui.html
 public class ShipmentApiApplication {
 
     public static void main(String[] args) {

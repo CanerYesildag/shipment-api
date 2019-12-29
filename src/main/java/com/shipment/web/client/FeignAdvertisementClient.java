@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
 @Primary
-@FeignClient( url = "localhost:8090", name = "advertisement-api")
+@FeignClient( url = "localhost:7777", name = "advertisement-api")
 public interface FeignAdvertisementClient {
 
     @GetMapping(value = "/advertisement/api/{productName}")
